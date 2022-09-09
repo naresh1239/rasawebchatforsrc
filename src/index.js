@@ -10,6 +10,7 @@ import ThemeContext from '../src/components/Widget/ThemeContext';
 // eslint-disable-next-line import/no-mutable-exports
 
 const ConnectedWidget = forwardRef((props, ref) => {
+
   class Socket {
     constructor(
       url,
