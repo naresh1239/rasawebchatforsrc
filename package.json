@@ -9,7 +9,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js -p",
+    "build": "webpack --config webpack.prod.js --mode production",
     "test": "jest",
     "prepare": "npm run build",
     "release": "standard-version"
@@ -23,6 +23,8 @@
   "dependencies": {
     "@popperjs/core": "^2.4.0",
     "@stomp/stompjs": "^5.4.2",
+    "extendable-media-recorder": "^7.0.1",
+    "extendable-media-recorder-wav-encoder": "^7.0.76",
     "html-webpack-plugin": "^3.2.0",
     "immutable": "^3.8.2",
     "node-sass": "^7.0.2",

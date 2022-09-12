@@ -74,3 +74,127 @@
         box-shadow: 0 0 0 0 rgba(76, 189, 90, 0);
     }
 }
+
+.rwa-loader {
+  border: 16px solid #c9c4c4 !important;
+  border-radius: 50%;
+  border-top: 16px solid #135afe !important;
+  width: 10px;
+  height: 10px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.gg-record {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 20px;
+    height: 20px;
+    border: 6px solid transparent !important;
+    box-shadow: 0 0 0 2px,inset 0 0 0 10px;
+    border-radius: 100px;
+    float: left;
+}
+
+.gg-play-stop-r {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid !important;
+    border-radius: 4px;
+    float: left;
+}
+.gg-play-stop-r::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 6px;
+    left: 6px;
+    background: currentColor;
+}
+
+.gg-mic {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 12px;
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+    border: 2px solid !important;
+    border-top: 0;
+    margin-top: 3px
+}
+.gg-mic::after,
+.gg-mic::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+}
+.gg-mic::after {
+    border: 2px solid;
+    width: 8px;
+    height: 18px;
+    left: 2px;
+    top: -10px;
+    border-radius: 4px
+}
+.gg-mic::before {
+    width: 10px;
+    height: 4px;
+    top: 12px;
+    left: 1px;
+    border-right: 4px solid transparent !important;
+    box-shadow:
+        0 2px 0,
+        inset -2px 0 0
+}
+
+/*THE ARTIFAKT ;) */
+.microphone{
+	width:2em;
+	height:6em;
+	background:#fff;
+	border-radius:1em;
+}
+.microphone:before{
+	content:"";
+	position:absolute;
+	bottom:-1em;
+	left:-1em;
+	width:4em;
+	height:0.5em;
+	background:#fff;
+}
+.microphone:after{
+	content:"";
+	position:absolute;
+	bottom:-0.5em;
+	left:-0.5em;
+	width:3em;
+	height:3em;
+	border:0.3em solid #fff;
+	border-top:0.3em solid #3dc0f1;
+	border-radius:0 0 1.5em 1.5em;
+}

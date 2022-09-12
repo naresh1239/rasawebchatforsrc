@@ -15,14 +15,13 @@ module.exports = [{
     libraryTarget: 'umd'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['*', '.js', '.jsx']
   },
   mode: 'production',
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        test: /\.js|\.jsx$/,
         use: [
           {
             loader: 'string-replace-loader',
@@ -31,7 +30,16 @@ module.exports = [{
               replace: version
             }
           },
-          { loader: 'babel-loader' }
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [['@babel/preset-env', {
+                'targets': {
+                  'browsers': ['ie 10', 'safari 7']
+                }
+              }]]
+            }
+          }
         ]
       },
       {
@@ -92,7 +100,6 @@ module.exports = [{
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
         use: [
           {
             loader: 'string-replace-loader',
@@ -101,7 +108,16 @@ module.exports = [{
               replace: version
             }
           },
-          { loader: 'babel-loader' }
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [['@babel/preset-env', {
+                'targets': {
+                  'browsers': ['ie 10', 'safari 7']
+                }
+              }]]
+            }
+          }
         ]
       },
       {
