@@ -1,5 +1,5 @@
 let config = {
-    MEDIA_ROOT_FIX: "http://13.233.202.75:8089"
+    MEDIA_ROOT_FIX: "https://media.chatbotapp.click"
 }
 
 export default config;
