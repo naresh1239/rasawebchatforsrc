@@ -32,7 +32,7 @@ class VidReply extends PureComponent {
           { this.props.message.get('title') }
         </b>
         <div className="rw-video-details">
-          <iframe src={this.fixUrl(this.props.message.get('video'))} className="rw-videoFrame" />
+          <iframe allow="autoplay *; fullscreen *" allowfullscreen="true" src={this.fixUrl(this.props.message.get('video')) + '?rel=0;&autoplay=1'} className="rw-videoFrame" />
         </div>
       </div>
     );
