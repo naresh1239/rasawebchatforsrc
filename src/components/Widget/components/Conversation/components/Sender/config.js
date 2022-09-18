@@ -1,5 +1,5 @@
 let config = {
-    DOCKSPEECH_BASE: "https://chatwidget-cvxm23.apps.hexmos.com",
+    DOCKSPEECH_BASE: "https://speech.chatbotapp.click",
     DOCK_TRANSCRIPTION: "transcription"
 }
 
