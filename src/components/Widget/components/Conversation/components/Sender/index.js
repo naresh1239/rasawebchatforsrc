@@ -48,7 +48,7 @@ const Sender = ({ sendMessage, inputTextFieldHint, disabledInput, userInput }) =
   let [transcribedResult, setTranscribedResult] = useState("");
 
   useEffect(() => {
-    localStorage.clear();
+    localStorage.removeItem("chat_session");
 
     async function initMediaStream() {
       let port;
