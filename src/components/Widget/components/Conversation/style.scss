@@ -1,7 +1,7 @@
-@import "variables.scss";
+@import "../../../../scss/variables.scss";
 
-@import "common.scss";
-@import "animation.scss";
+@import "../../../../scss/common.scss";
+@import "../../../../scss/animation.scss";
 
 &.#{$namespace}conversation-container {
   @include animation(0, 0.5s, slide-in);
