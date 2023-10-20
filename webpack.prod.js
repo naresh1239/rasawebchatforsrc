@@ -33,6 +33,7 @@ module.exports = {
         test: /\.svg$/,
         use: ['svg-inline-loader'],
       },
+      { test: /\.txt$/, use: 'raw-loader' }
       // Add more rules for handling other asset types (e.g., images) if necessary
     ],
   },
