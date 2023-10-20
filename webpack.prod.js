@@ -1,6 +1,5 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { version } = require('./package.json');
 
 module.exports = {
   entry: {
@@ -12,6 +11,7 @@ module.exports = {
     filename: '[name]/index.js',
     library: 'WebChat',
     libraryTarget: 'umd',
+    globalObject: 'this', // Required for umd libraryTarget
   },
   resolve: {
     extensions: ['.js', '.jsx'], // Include .jsx extension for JSX files
