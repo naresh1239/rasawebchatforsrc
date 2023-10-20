@@ -2,19 +2,15 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: {
-    lib: './umd.js',
-    module: './index.js',
-  },
+  entry: './umd.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name]/index.js',
+    path: path.join(__dirname, '/lib'),
+    filename: 'index.js',
     library: 'WebChat',
-    libraryTarget: 'umd',
-    globalObject: 'this', // Required for umd libraryTarget
+    libraryTarget: 'umd'
   },
   resolve: {
-    extensions: ['.js', '.jsx'], // Include .jsx extension for JSX files
+    extensions: ['*', '.js', '.jsx']
   },
   mode: 'production',
   module: {
